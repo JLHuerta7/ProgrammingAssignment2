@@ -1,7 +1,7 @@
 ## Below are two functions that are used to create a special object that stores 
 ## a matrix and cache's its inverse.
 
-## makeCacheMatrix creates from a matrix a list containing a function to
+## makeCacheMatrix creates a list from a matrix containing a function to
 # $ set(): set the value of the matrix
 # $ get(): get the value of the matrix
 # $ setinverse(): set the value of the inverse
@@ -22,7 +22,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve gets the inverse from a cacheMatrix. If the inverse is not 
+## currently stored in cache the function computes and stores it via setinverse 
+## function. If it is stored, it gets directly using getinverse function.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
